@@ -1,0 +1,57 @@
+<div class="row justify-content-center">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title mb-4">Reservar una Habitación</h3>
+            <form [formGroup]="reservaForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label text-uppercase">Tu Nombre</label>
+                    <input type="text" class="form-control" id="nombre" formControlName="nombre"
+                        placeholder="Tu Nombre Completo">
+                </div>
+                <div class="mb-3">
+                    <label for="llegada" class="form-label text-uppercase">Llegada</label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-calendar"></i>
+                        </span>
+                        <input type="date" class="form-control" id="llegada" formControlName="llegada">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="salida" class="form-label text-uppercase">Salida</label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-calendar"></i>
+                        </span>
+                        <input type="date" class="form-control" id="salida" formControlName="salida">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="adultos" class="form-label text-uppercase">Adultos</label>
+                        <select class="form-select" id="adultos" formControlName="adultos">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label for="children" class="form-label text-uppercase">Niños</label>
+                        <select class="form-select" id="children" formControlName="children">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                    <span>Verificar Disponibilidad</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

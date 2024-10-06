@@ -1,0 +1,11 @@
+/* Ajustes para que los divs internos se alineen y tengan la misma altura */
+.equal-height {
+    display: flex;
+  }
+  .equal-height > div {
+    display: flex;
+    flex-direction: column;
+  }
+  .equal-height > div > * {
+    flex-grow: 1;
+  }

@@ -1,0 +1,62 @@
+.carousel-item {
+  height: 450px;
+  object-fit: cover;
+  /* Recorta la imagen manteniendo su proporción */
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+.carousel-caption h1 {
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+
+.carousel-caption h3 {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.carousel-caption .btn {
+  margin-top: 30px;
+}
+
+.grupo-subtitulo-slider {
+  margin-top: 20px;
+}
+
+.linea-decoracion {
+  width: 100px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+  .carousel-caption {
+    bottom: 165px;
+  }
+
+  .carousel-caption h1 {
+    font-size: 24px;
+  }
+
+  .carousel-caption h3 {
+    font-size: 18px;
+  }
+
+  .grupo-subtitulo-slider {
+    margin-top: 10px;
+  }
+
+  .linea-decoracion {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+}

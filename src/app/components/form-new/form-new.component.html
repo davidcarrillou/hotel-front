@@ -1,0 +1,49 @@
+
+    <form class="form-cont" aria-content="root">
+        <h2 class="headerForm">Agregar Nueva Habitación</h2>
+        <div class="formItem">
+            <label for="roomNumber" class="labelItem">Número de Habitación</label>
+            <input type="text" name="input-addnum-habitacion" class="select-clicked select" id="roomNumber" required />
+        </div>
+        <div class="formItem pos-rel dropdown">
+            <label for="roomSelect" class="labelItem">Tipo de Habitación</label>
+            <button type="button" role="combobox" class="select" id="roomSelect" #roomSelect name="input-select-habitacion"
+                (click)="boton()">
+                <span style="pointer-events: none;" class="selected" #selected>Selecciona una opción</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-chevron-down h-4 w-4 opacity-50" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6"></path>
+                </svg>
+            </button>
+            <ul class="menu" id="dropmenu" #dropmenu>
+                <li class="active">Individual</li>
+                <li>Doble</li>
+                <li>Otro</li>
+            </ul>
+        </div>
+        <div class="formItem">
+            <label for="roomCapacity">Capacidad</label>
+            <input type="number" name="input-add-capacidad" id="roomCapacity" class="select-clicked select" required />
+        </div>
+        <div class="formItem">
+            <label for="roomPrice">Precio por Noche</label>
+            <input type="number" name="input-add-Price" id="roomPrice" class="select-clicked select" required />
+        </div>
+        <div class="formItem">
+            <label for="roomDescription">Descripción</label>
+            <textarea type="text" name="input-add-Description" id="roomDescription" class="select-clicked select"
+                style="height: 120px; resize: none;" maxlength="120"></textarea>
+        </div>
+        <div class="formItem switch-comp">
+            <button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                class="btn-switch" id="roomAvailable" (click)="change()">
+                <span data-state="unchecked" class="dotSwitch" #dotSwitch></span>
+            </button>
+            <input class="checkbox" aria-hidden="true"
+                style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px; width: 44px; height: 24px;"
+                tabindex="-1" type="checkbox" value="on" #checkbox>
+            <label for="roomAvailable">Disponible</label>
+        </div>
+        <button type="submit" class="btn btn-submit">Agregar Habitación</button>
+    </form>

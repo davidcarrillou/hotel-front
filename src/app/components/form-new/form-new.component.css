@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+[aria-content="root"] {
+	--blanco: #fff;
+	--negro: #000;
+	--sombra-paralela: #00000012;
+
+	--Roboto: 'Roboto Flex', arial, Sans-Serif;
+	--Bold_F: 700;
+	--SemiBold_F: 600;
+	--Regular_F: 500;
+	--Normal_F: 400;
+	--Light_F: 300;
+	--spacing: 0.25px;
+	--Nll_SCubic-Bezier: All 0.48s cubic-bezier(0.06, 0.06, 0.00, 1.04);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.headerForm {
+	text-align: center;
+	font-family: var(--Roboto);
+	font-weight: var(--Bold_F);
+	letter-spacing: var(--spacing);
+	color: var(--negro);
+	margin-block-end: 12px;
+}
+
+.form_container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 24px;
+}
+
+.form-cont {
+	padding: 24px;
+	border-radius: 6px;
+	border: 1px solid #0e0e0f50;
+}
+
+.formItem {
+	margin-block-start: 24px;
+}
+
+.select {
+	background: var(--blanco);
+	border: 1px solid #0e0e0f50;
+	border-radius: 6px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 14px;
+	cursor: pointer;
+	width: 100%;
+
+	& svg {
+		width: 16px;
+		height: 16px;
+	}
+}
+
+.select {
+	font-size: 14px;
+	line-height: 16px;
+	font-family: var(--Roboto);
+	font-weight: var(--Normal_F);
+	letter-spacing: var(--spacing);
+	color: var(--negro);
+}
+
+.select span {
+	font-size: 14px;
+	line-height: 16px;
+	font-family: var(--Roboto);
+	font-weight: var(--Normal_F);
+	letter-spacing: var(--spacing);
+	color: var(--negro);
+}
+
+.select-clicked {
+	outline: 2px solid #0000;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, outline, outline-offset;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+}
+
+.select-clicked:is(:focus) {
+	outline: 2px solid #0005;
+	outline-offset: 2px;
+}
+
+.pos-rel {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+label {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 16px;
+	font-family: var(--Roboto);
+	font-weight: var(--Regular_F);
+	letter-spacing: var(--spacing);
+	color: var(--negro);
+	margin-block-end: 5px;
+}
+
+.menu {
+	position: absolute;
+	list-style: none;
+	display: none;
+	opacity: 0;
+	border: 1px solid #0e0e0f50;
+	border-radius: 6px;
+	padding: 4px;
+	width: 100%;
+	top: 4.2em;
+	overflow: hidden;
+	transition: 0.2s;
+	z-index: 1;
+	background: #FFF;
+
+	& li {
+		padding: 10px 14px;
+		font-size: 14px;
+		line-height: 16px;
+		font-family: var(--Roboto);
+		font-weight: var(--Normal_F);
+		letter-spacing: var(--spacing);
+
+		&:hover {
+			background-color: #0001;
+		}
+	}
+
+	& li.active {
+		background-color: #0001;
+	}
+
+	&.menu-open {
+		display: block;
+		opacity: 1;
+		animation: slidein 240ms cubic-bezier(0.06, 0.06, 0.00, 1.04);
+		transform-origin: top;
+	}
+
+	& li:nth-child(1) {
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+	}
+
+	& li:nth-child(3) {
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+	}
+}
+
+
+.btn-submit {
+	background: #0e0e0f;
+	border: none;
+	color: #FFF;
+	border-radius: 6px;
+	padding: 10px 12px;
+	cursor: pointer;
+	width: 100%;
+	font-family: var(--Roboto);
+	font-size: 14px;
+	font-weight: var(--Regular_F);
+	letter-spacing: var(--spacing);
+	margin-block-start: 12px;
+
+	&:hover {
+		background: #2b2b2e;
+	}
+}
+
+@keyframes slidein {
+	0% {
+		transform: scale(50%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(100%);
+		opacity: 1;
+	}
+}
+
+.switch-comp {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.btn-switch {
+	width: 44px;
+	height: 24px;
+	border-radius: 25px;
+	border: none;
+	display: flex;
+	position: relative;
+	cursor: pointer;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+
+	& .dotSwitch {
+		transition-property: transform;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 150ms;
+		transform: translateX(0);
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background-color: var(--blanco);
+		border-radius: 25px;
+		top: 2px;
+		left: 2px;
+	}
+
+	& .dotSwitch.swipe {
+		transform: translateX(1.25rem);
+	}
+}
+
+[data-state="checked"] {
+	background-color: #0e0e0F;
+}
+
+[data-state="unchecked"] {
+	background-color: hsl(240 5.9% 90%);
+}
+
+label[for="roomAvailable"] {
+	margin-block-end: 0;
+	margin-inline-start: 5px;
+}

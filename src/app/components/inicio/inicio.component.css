@@ -1,0 +1,26 @@
+.imagen-hero {
+    background-color: grey;
+    height: 657px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .formulario-reserva {
+    border-radius: 10px;
+  }
+  
+  .imagen-nosotros {
+    background-color: grey;
+    height: 525px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .seccion-nosotros {
+    border-radius: 10px;
+  }
+  

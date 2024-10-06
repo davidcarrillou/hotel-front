@@ -1,0 +1,12 @@
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .btn-primary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  .btn-primary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+  }
