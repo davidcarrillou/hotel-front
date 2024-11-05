@@ -7,6 +7,8 @@ import { FormNewComponent } from './components/form-new/form-new.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { AppComponent } from './app.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { CuartosComponent } from './components/cuartos/cuartos.component';
+import { ContactanosComponent } from './components/contactanos/contactanos.component';
 
 export const routes: Routes = [
   {
@@ -16,6 +18,8 @@ export const routes: Routes = [
       { path: 'nosotros', component: NosotrosComponent },
       { path: 'carrusel', component: CarruselComponent },
       { path: 'slider', component: SliderComponent },
+      { path: 'cuartos', component: CuartosComponent },
+      { path: 'contacto', component: ContactanosComponent },
     ]
   },
   { path: 'head', component: EncabezadoComponent },

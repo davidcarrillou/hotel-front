@@ -1,0 +1,63 @@
+<div class="image-viewer">
+    <!-- Toolbar -->
+    <div class="viewer-toolbar">
+      <div class="position-counter">{{ currentIndex + 1 }} / {{ images.length }}</div>
+      
+      <div class="toolbar-actions">
+        <button class="btn btn-dark btn-sm" title="Share">
+          <i class="fa fa-share-alt"></i>
+        </button>
+        <button class="btn btn-dark btn-sm" title="Copy">
+          <i class="fa fa-copy"></i>
+        </button>
+        <button class="btn btn-dark btn-sm" (click)="zoomIn()" title="Zoom in">
+          <i class="fa fa-search-plus"></i>
+        </button>
+        <button class="btn btn-dark btn-sm" (click)="zoomOut()" title="Zoom out">
+          <i class="fa fa-search-minus"></i>
+        </button>
+        <button class="btn btn-dark btn-sm" (click)="toggleFullscreen()" title="Fullscreen">
+          <i class="fa fa-expand"></i>
+        </button>
+        <button class="btn btn-dark btn-sm" title="Slideshow">
+          <i class="fa fa-play"></i>
+        </button>
+        <button class="btn btn-dark btn-sm" title="Download">
+          <i class="fa fa-download"></i>
+        </button>
+        <button class="btn btn-dark btn-sm" (click)="close.emit()" title="Close">
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Main Image -->
+    <div class="main-image-container">
+      <button class="nav-button prev" (click)="previousImage()">
+        <i class="fa fa-chevron-left"></i>
+      </button>
+      
+      <div class="main-image" [style.transform]="'scale(' + zoom + ')'">
+        <img [src]="currentImage.url" [alt]="currentImage.title">
+      </div>
+  
+      <button class="nav-button next" (click)="nextImage()">
+        <i class="fa fa-chevron-right"></i>
+      </button>
+    </div>
+  
+    <!-- Thumbnails -->
+    <div class="thumbnails-container" [class.hidden]="!showThumbnails">
+      <div class="thumbnails-wrapper">
+        <div class="thumbnail" 
+             *ngFor="let image of images; let i = index"
+             [class.active]="i === currentIndex"
+             (click)="selectImage(i)">
+          <img [src]="image.thumbnail" [alt]="image.title">
+        </div>
+      </div>
+      <button class="btn btn-dark btn-sm toggle-thumbnails" (click)="toggleThumbnails()">
+        <i class="fas" [class.fa-chevron-down]="showThumbnails" [class.fa-chevron-up]="!showThumbnails"></i>
+      </button>
+    </div>
+  </div>
