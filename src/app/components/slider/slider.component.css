@@ -1,64 +1,82 @@
-/* slider.component.css */
+.contenedor-carrousel {
+	width: 100%;
+	position: relative;
+	aspect-ratio: var(--aspect-ratio);
+	--aspect-ratio: 4/2;
 
-/* Contenedor principal del slider */
-.slider-contenedor {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-    overflow: hidden;
-    text-align: center;
-  }
-  
-  /* Imagen del slider */
-  .slider-imagen {
-    width: 100%;
-    height: auto;
-    transition: opacity 1s;
-  }
-  
-  /* Botones para cambiar la imagen manualmente */
-  .btn-anterior, .btn-siguiente {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-  }
-  
-  .btn-anterior {
-    left: 0;
-  }
-  
-  .btn-siguiente {
-    right: 0;
-  }
-  
-  /* Estilos para los indicadores de imagen (bolitas) */
-  .indicadores {
-    text-align: center;
-    position: absolute;
-    bottom: 15px;
-    width: 100%;
-  }
-  
-  .indicador {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  /* Estilo para el indicador activo */
-  .indicador.activo {
-    background-color: #717171;
-  }
-  
+	& .contenido-carrousel,
+	.carrousel-item {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		transition: all 0.5s ease;
+	}
+
+	& .contenido-carrousel::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		background: #0005;
+		position: absolute;
+		z-index: 1;
+	}
+
+	& .btn-control {
+		height: 100%;
+		position: absolute;
+		padding-inline: 0.5rem;
+		z-index: 10;
+		background: none;
+		border: none;
+
+		& svg {
+			width: 32px;
+			height: 32px;
+			stroke: var(--mid_light);
+			transition-property: all;
+			transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+			transition-duration: .15s;
+			pointer-events: none;
+		}
+
+		&:hover svg {
+			stroke: hsla(240, 100%, 99.67%, 1);
+		}
+	}
+}
+
+.carrousel-caption {
+	width: 100%;
+	max-width: 480px;
+	min-width: 0;
+	display: inline-block;
+	margin: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9;
+}
+
+.imagen-carrousel {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	aspect-ratio: var(--aspect-ratio);
+	object-fit: cover;
+}
+
+.btn-control-next {
+	right: 0;
+	top: 0;
+}
+
+.btn-control-preview {
+	left: 0;
+	top: 0;
+}
+
+.contenido-carrousel .carrousel-item:not(.carrousel-item:first-child) {
+	display: none;
+}

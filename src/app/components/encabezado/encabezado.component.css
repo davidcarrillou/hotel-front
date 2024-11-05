@@ -1,4 +1,48 @@
-.navbar-brand img {
-    max-width: 100%;
-    height: auto;
+header {
+  background-color: var(--primary-mid-color);
+}
+
+.navegacion-doble {
+  display: flex;
+  flex-direction: column;
+
+  width: calc(100% - 48px);
+  margin: auto;
+}
+
+.sns-flex {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 4px;
+  color: var(--secondary-color);
+}
+
+.navegacion-uno {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1rem;
+  & h1 {
+    color: var(--secondary-color);
+    margin: 0;
+    & a {
+      color: currentColor;
+      text-decoration: none;
+    }
   }
+}
+
+.navegacion-dos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.navegacion-link {
+  padding: 0.75rem 1.25rem;
+  display: block;
+  color: var(--secondary-color);
+}

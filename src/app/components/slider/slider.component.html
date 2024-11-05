@@ -1,29 +1,36 @@
 <!-- slider.component.html -->
-
-<div class="slider-contenedor">
-    <!-- Botón de navegación hacia la imagen anterior -->
-    <button class="btn-anterior" (click)="cambiarImagenAnterior()">&#10094;</button>
-  
+<section class="contenedor-carrousel">
+  <div class="contenido-carrousel">
     <!-- Imagen actual en el slider -->
-    <img [src]="slides[indiceActual].imagen" alt="Imagen del slider" class="slider-imagen">
-  
+    <img [src]="slides[indiceActual].imagen" alt="Imagen del slider" class="imagen-carrousel">
+
     <!-- Contenedor del texto y botón superpuestos a la imagen -->
-    <div class="slider-texto-boton">
-      <h2>{{ slides[indiceActual].texto }}</h2>
-      <button class="btn-saber-mas">{{ slides[indiceActual].botonTexto }}</button>
+    <div class="carrousel-caption texto-[blanco]">
+      <h2 class="Nll_clamp">{{ slides[indiceActual].texto }}</h2>
+      <button class="boton boton-[primario]">{{ slides[indiceActual].botonTexto }}</button>
     </div>
-  
-    <!-- Botón de navegación hacia la imagen siguiente -->
-    <button class="btn-siguiente" (click)="cambiarImagenSiguiente()">&#10095;</button>
-  
+
     <!-- Indicadores de imagen (bolitas) -->
     <div class="indicadores">
-      <span 
-        *ngFor="let slide of slides; let i = index"
-        (click)="cambiarImagen(i)"
-        [class.activo]="i === indiceActual"
+      <span *ngFor="let slide of slides; let i = index" (click)="cambiarImagen(i)" [class.activo]="i === indiceActual"
         class="indicador">
       </span>
     </div>
   </div>
-  
+
+  <!-- Botón de navegación hacia la imagen anterior -->
+  <button class="btn-control btn-control-preview" (click)="cambiarImagenAnterior()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left">
+      <path d="m15 18-6-6 6-6" />
+    </svg>
+  </button>
+
+  <!-- Botón de navegación hacia la imagen siguiente -->
+  <button class="btn-control btn-control-next" (click)="cambiarImagenSiguiente()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right">
+      <path d="m9 18 6-6-6-6" />
+    </svg>
+  </button>
+</section>

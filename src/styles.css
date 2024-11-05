@@ -1,1 +1,173 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+	/* font-size: 10px; */
+	font-family: var(--Roboto), system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: auto;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	--ico-color:
+		hsla(240, 1.86%, 2.66%, 1);
+	--primary-color:
+		hsla(240, 100%, 99.67%, 1);
+	--secondary-color:
+		hsla(240, 1.86%, 2.66%, 1);
+  --primary-mid-color:
+		hsla(0, 0%, 93.33%, 1);
+  --secondary-mid-color:
+		hsla(0, 100%, 6.67%, 1);
+	--mid_dark:
+		hsla(240, 4%, 46%, 1);
+	--mid_light:
+		hsla(240, 4%, 64%, 1);
+	--hover_state:
+		hsla(240, 4%, 50%, 0.15);
+	--accent_color:
+		hsla(212, 92.77%, 51.18%, 1);
+	--links:
+		hsla(216, 98.36%, 52.16%, 1);
+
+	--Roboto: 'Roboto Flex';
+	--SemiBold_F: 600;
+	--Medium_F: 500;
+	--Regular_F: 400;
+	--Light_F: 300;
+}
+
+/* latin */
+@font-face {
+	font-family: 'Roboto Flex';
+	font-style: normal;
+	font-weight: 100 900;
+	font-stretch: 100%;
+	src: url(https://fonts.gstatic.com/s/robotoflex/v26/NaN4epOXO_NexZs0b5QrzlOHb8wCikXpYqmZsWI-__OGbt8jZktqc2V3Zs0KvDLdBP8SBZtOs2IifRuUZQMsPJtUsR4DEK6cULNeUx9XgTnH37Ha_FIAp4Fm0PP1hw45DntW2x0wZGzhPmr1YNMYKYn9_1IQXGwJAiUJVUMdN5YUW4O8HtSoXjC1z3QSabshNFVe3e0O5j3ZjrZCu23Qd4G0EBysQNK-QKavMl12JoUc.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--ico-color:
+			hsla(240, 100%, 99.67%, 1);
+		--primary-color:
+			hsla(240, 1.86%, 2.66%, 1);
+		--secondary-color:
+			hsla(240, 100%, 99.67%, 1);
+    --primary-mid-color:
+      hsla(0, 0%, 6.67%, 1);
+    --secondary-mid-color:
+      hsla(0, 0%, 93.33%, 1);
+		--mid_light:
+			hsla(240, 4%, 46%, 1);
+		--mid_dark:
+			hsla(240, 4%, 64%, 1);
+		--hover_state:
+			hsla(240, 4%, 100%, 0.15);
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
+}
+
+html svg {
+	vertical-align: top;
+}
+
+li {
+  list-style: none;
+}
+
+dl, ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+@supports (scrollbar-width: auto) {
+	html {
+		scrollbar-color: var(--mid_light) transparent;
+		scrollbar-width: auto;
+	}
+}
+
+/* GLOBAL STYLES */
+.Nll_clamp {
+	width: 100%;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	line-clamp: 1;
+	word-break: break-all;
+	overflow: hidden;
+}
+
+.Nll_clamp-\[2\] {
+	width: 100%;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	word-break: break-all;
+	overflow: hidden;
+}
+
+.Nll_clamp-\[3\] {
+	width: 100%;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
+	word-break: break-all;
+	overflow: hidden;
+}
+
+.Nll_clamp-\[4\] {
+	width: 100%;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	line-clamp: 4;
+	word-break: break-all;
+	overflow: hidden;
+}
+
+.texto-\[blanco\] {
+  color: hsla(240, 100%, 99.67%, 1);
+}
+
+.texto-\[--links\] {
+  color: var(--links);
+}
+
+.underline-\[4\] {
+  text-underline-offset: 4px;
+  text-decoration: none;
+}
+
+.underline\:hover:hover {
+  text-decoration: underline;
+}
+
+.boton {
+  background: none;
+  border: none;
+}
+
+.boton-\[primario\] {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--links);
+  border-radius: 8px;
+  &:hover {
+    background-color: var(--links);
+  }
+}
