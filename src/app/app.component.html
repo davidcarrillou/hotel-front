@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
+<div>
   <header class="page-header" style="padding-bottom: 24px">
     <!-- RD Navbar-->
     <div class="rd-navbar-wrap">
@@ -13,25 +6,5 @@
     </div>
   </header>
 
-  <div *ngIf="mensajeHabitaciondisponible" class="alert alert-success" role="alert">
-    {{mensajeHabitaciondisponible}} <a href="#" class="alert-link">CONTINUAR</a>
-  </div>
-  <div *ngIf="mensajeError"class="alert alert-danger" role="alert">
-   {{mensajeError}}
-  </div>
+<router-outlet></router-outlet>
 
-  <section class="section">
-    <div class="container">
-      <div class="row equal-height">
-        <div class="col-md-8">
-          <app-carrusel></app-carrusel>
-        </div>
-        <div class="col-md-4">
-          <app-formulario-reservacion></app-formulario-reservacion>
-        </div>
-      </div>
-    </div>
-  </section>
-  <router-outlet></router-outlet>
-</body>
-</html>

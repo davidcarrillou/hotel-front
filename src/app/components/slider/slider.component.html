@@ -1,0 +1,29 @@
+<!-- slider.component.html -->
+
+<div class="slider-contenedor">
+    <!-- Botón de navegación hacia la imagen anterior -->
+    <button class="btn-anterior" (click)="cambiarImagenAnterior()">&#10094;</button>
+  
+    <!-- Imagen actual en el slider -->
+    <img [src]="slides[indiceActual].imagen" alt="Imagen del slider" class="slider-imagen">
+  
+    <!-- Contenedor del texto y botón superpuestos a la imagen -->
+    <div class="slider-texto-boton">
+      <h2>{{ slides[indiceActual].texto }}</h2>
+      <button class="btn-saber-mas">{{ slides[indiceActual].botonTexto }}</button>
+    </div>
+  
+    <!-- Botón de navegación hacia la imagen siguiente -->
+    <button class="btn-siguiente" (click)="cambiarImagenSiguiente()">&#10095;</button>
+  
+    <!-- Indicadores de imagen (bolitas) -->
+    <div class="indicadores">
+      <span 
+        *ngFor="let slide of slides; let i = index"
+        (click)="cambiarImagen(i)"
+        [class.activo]="i === indiceActual"
+        class="indicador">
+      </span>
+    </div>
+  </div>
+  

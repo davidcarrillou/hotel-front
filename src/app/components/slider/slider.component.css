@@ -1,0 +1,64 @@
+/* slider.component.css */
+
+/* Contenedor principal del slider */
+.slider-contenedor {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  /* Imagen del slider */
+  .slider-imagen {
+    width: 100%;
+    height: auto;
+    transition: opacity 1s;
+  }
+  
+  /* Botones para cambiar la imagen manualmente */
+  .btn-anterior, .btn-siguiente {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .btn-anterior {
+    left: 0;
+  }
+  
+  .btn-siguiente {
+    right: 0;
+  }
+  
+  /* Estilos para los indicadores de imagen (bolitas) */
+  .indicadores {
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+  }
+  
+  .indicador {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Estilo para el indicador activo */
+  .indicador.activo {
+    background-color: #717171;
+  }
+  

@@ -4,11 +4,23 @@ import { EncabezadoComponent } from './components/encabezado/encabezado.componen
 import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { FormularioReservacionComponent } from './components/formulario-reservacion/formulario-reservacion.component';
 import { FormNewComponent } from './components/form-new/form-new.component';
+import { NosotrosComponent } from './components/nosotros/nosotros.component';
+import { AppComponent } from './app.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 export const routes: Routes = [
-    {path: 'inicio', component:InicioComponent},
-    {path: 'head', component:EncabezadoComponent},
-    {path: 'carrusel', component:CarruselComponent},
-    {path: 'form', component:FormularioReservacionComponent},
-    {path: 'form2', component:FormNewComponent},
+  {
+    path: '',
+    children: [
+      { path: 'inicio', component: InicioComponent },
+      { path: 'nosotros', component: NosotrosComponent },
+      { path: 'carrusel', component: CarruselComponent },
+      { path: 'slider', component: SliderComponent },
+    ]
+  },
+  { path: 'head', component: EncabezadoComponent },
+
+  { path: 'form', component: FormularioReservacionComponent },
+  { path: 'form2', component: FormNewComponent },
+
 ];
