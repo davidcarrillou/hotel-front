@@ -1,35 +1,25 @@
-.imagen-hero {
-    background-color: grey;
-    height: 657px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+app-slider {
+  height: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  display: inherit;
+}
+.content-mensajes {
+  display: flex;
+  align-items: center;
+  /* Centra verticalmente */
+  justify-content: center;
+  /* Centra horizontalmente */
+}
 
-  .formulario-reserva {
-    border-radius: 10px;
-  }
+.alert {
+  width: 100%;
+  text-align: center;
+  --bs-alert-margin-bottom: 0;
+  --bs-alert-border-radius: 0;
+}
 
-  .imagen-nosotros {
-    background-color: grey;
-    height: 525px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .seccion-nosotros {
-    border-radius: 10px;
-  }
-
-  .content-mensajes{
-    display: flex;
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
-  }
-
-  .alert{
-    width: fit-content;
-  }
+.section {
+  padding-block-start: 24px;
+  background-color: var(--primary-color);
+}

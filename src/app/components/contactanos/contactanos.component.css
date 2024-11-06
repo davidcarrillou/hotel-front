@@ -1,0 +1,42 @@
+.form-control {
+    padding: 0.75rem 1rem;
+    border-radius: 0;
+    background-color: #f8f9fa;
+    border: none;
+  }
+  
+  .form-control:focus {
+    box-shadow: none;
+    border-color: #776e88;
+  }
+  
+  .btn-secondary {
+    background-color: #776e88;
+    border-color: #776e88;
+    padding: 0.75rem 1rem;
+    border-radius: 0;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #665d77;
+    border-color: #665d77;
+  }
+  
+  .invalid-feedback {
+    color: #dc3545;
+    font-size: 0.875em;
+    margin-top: 0.25rem;
+  }
+  
+  textarea.form-control {
+    resize: none;
+  }
+  
+  /* Social icons hover effect */
+  .social-icons a {
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #776e88 !important;
+  }

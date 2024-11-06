@@ -1,0 +1,35 @@
+<section class="rooms-section py-5">
+    <div class="container">
+        <h2 class="text-center display-4 mb-3">Rooms & Suites</h2>
+
+        <p class="text-center text-muted mb-5">
+            Royal Villas offers the finest accommodations with unique designs that provide both a luxurious and relaxing
+            environment. Specially
+            selected fabrics and finishes vary from room to room, offering guests a variety of beautiful and unique
+            atmospheres to select from.
+        </p>
+
+        <div class="row g-4">
+            <div class="col-md-4" *ngFor="let room of rooms">
+                <div class="room-card" (click)="verDetalleCuarto(room)">
+                    <div class="room-image">
+                        <!-- Using a placeholder image with the correct dimensions -->
+                        <div class="bg-light w-100" style="aspect-ratio: 370/276;">
+                            <img [src]="room.mainImage" [alt]="room.title">
+                        </div>
+                        <div class="room-overlay">
+                            <div class="room-content">
+                                <div class="room-border">
+                                    <h3 class="room-title">{{room.title}}</h3>
+                                    <p class="room-description">{{room.description}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-modal-imagen-zoom *ngIf="verCuarto && cuartoSeleccionado" [images]="cuartoSeleccionado.images"
+        (close)="cerrarDetalleCuarto()"></app-modal-imagen-zoom>
+</section>

@@ -4,6 +4,7 @@ import { CarruselComponent } from '../carrusel/carrusel.component';
 import { FormularioReservacionComponent } from '../formulario-reservacion/formulario-reservacion.component';
 import { SystemService } from '../../service/system.service';
 import { CommonModule } from '@angular/common';
+import { SliderComponent } from '../slider/slider.component';
 
 @Component({
   selector: 'app-inicio',
@@ -12,7 +13,8 @@ import { CommonModule } from '@angular/common';
     FormularioReservacionComponent,
     CarruselComponent,
     EncabezadoComponent,
-    CommonModule
+    CommonModule,
+    SliderComponent
 ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
