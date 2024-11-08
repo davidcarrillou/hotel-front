@@ -1,13 +1,15 @@
 
 <div class="content-mensajes">
   <div *ngIf="mensajeHabitaciondisponible" class="alert alert-success" role="alert">
-    {{mensajeHabitaciondisponible}} <a href="#" class="alert-link">CONTINUAR</a>
+    {{mensajeHabitaciondisponible}} <a href="/contacto" class="alert-link">CONTINUAR</a>
+  </div>
+  <div *ngIf="mensajeExito" class="alert alert-success" role="alert">
+    {{mensajeExito}} 
   </div>
   <div *ngIf="mensajeError" class="alert alert-danger" role="alert">
     {{mensajeError}}
   </div>
 </div>
-
 
 <section class="section">
   <div class="container">

@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-slider',
@@ -15,17 +16,17 @@ export class SliderComponent implements OnInit, OnDestroy {
   slides = [
     {
       imagen: '/assets/img/1.jpg',
-      texto: 'Tu estancia en este hotel te espera',
+      texto: 'Cuartos agradables',
       botonTexto: 'Saber más'
     },
     {
       imagen: '/assets/img/2.jpg',
-      texto: 'Masajes relajadores',
+      texto: 'Restautante y comida deliciosa',
       botonTexto: 'Saber más'
     },
     {
       imagen: '/assets/img/3.jpg',
-      texto: 'Comida deliciosa',
+      texto: 'Estancias mas comodas',
       botonTexto: 'Saber más'
     }
   ];
@@ -35,6 +36,9 @@ export class SliderComponent implements OnInit, OnDestroy {
 
   // Variable para almacenar el intervalo automático
   intervaloAutomatico: any;
+  constructor(private router: Router){
+    
+  }
 
   ngOnInit(): void {
     // Inicializar el cambio automático de imagen cada 6 segundos
@@ -75,5 +79,9 @@ export class SliderComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     // Detener el cambio automático al destruir el componente
     this.detenerCambioAutomatico();
+  }
+
+  cambioACuartos(){
+    this.router.navigate(['/cuartos']);
   }
 }

@@ -1,4 +1,4 @@
 .btn-secondary:hover {
-    background-color: #665d77 !important;
-    border-color: #665d77 !important;
+    background-color:var(--primary-mid-color) !important;
+    border-color: var(--primary-mid-color) !important;
   }

@@ -14,7 +14,7 @@ export const routes: Routes = [
   {
     path: '',
     children: [
-      { path: 'inicio', component: InicioComponent },
+      { path: '', component: InicioComponent },
       { path: 'nosotros', component: NosotrosComponent },
       { path: 'carrusel', component: CarruselComponent },
       { path: 'slider', component: SliderComponent },

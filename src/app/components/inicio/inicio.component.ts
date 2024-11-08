@@ -23,17 +23,25 @@ export class InicioComponent implements OnInit {
   title = 'hotel-front';
   mensajeHabitaciondisponible: string = '';
   mensajeError: string = '';
+  mensajeExito: string = '';
   constructor(private systemService: SystemService) {
 
   }
   ngOnInit(): void {
     this.systemService.mensajeExito.subscribe({
       next: (mensajeExito) => {
-        this.mensajeHabitaciondisponible = mensajeExito
+        this.mensajeExito = mensajeExito
       }, error: (err) => {
         this.mensajeError = 'error recibir el mensaje'
       },
-    })
+    });
+    this.systemService.msjDisponible.subscribe({
+      next: (msjDisponible) => {
+        this.mensajeHabitaciondisponible = msjDisponible
+      }, error: (err) => {
+        this.mensajeError = 'error recibir el mensaje'
+      },
+    });
   }
 }
 

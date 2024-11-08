@@ -7,7 +7,7 @@
     <!-- Contenedor del texto y botón superpuestos a la imagen -->
     <div class="carrousel-caption texto-[blanco]">
       <h2 class="Nll_clamp">{{ slides[indiceActual].texto }}</h2>
-      <button class="boton boton-[primario]">{{ slides[indiceActual].botonTexto }}</button>
+      <button class="btn btn-primary" (click)="cambioACuartos()">{{ slides[indiceActual].botonTexto }}</button>
     </div>
 
     <!-- Indicadores de imagen (bolitas) -->

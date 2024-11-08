@@ -29,7 +29,7 @@ export class FormularioReservacionComponent {
     if (this.reservaForm.valid) {
       console.log(this.reservaForm.value);
       // Here you would typically send the form data to your backend
-      this.systemService.setMensajeExito("Se encontraron habitaciones disponibles, continuar la reservacion aqui: ")
+      this.systemService.setMensajeDispinible("Se encontraron habitaciones disponibles, continuar la reservacion aqui: ")
     }
   }
 }
