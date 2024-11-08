@@ -1,14 +1,14 @@
 <section class="rooms-section py-5">
     <div class="container">
-        <h2 class="text-center display-4 mb-3">Cuartos Disponibles</h2>
+        <h2 class="display-4 mb-3">Cuartos Disponibles</h2>
 
-        <p class="text-center text-muted mb-5">
-            "El Hotel HC, inspirado en la calidez y serenidad de sus inicios, 
-            ofrece ahora una experiencia de alojamiento única con habitaciones diseñadas 
-            para brindar tanto lujo como comodidad. Cada espacio está decorado con detalles y 
-            acabados seleccionados cuidadosamente, reflejando la esencia y evolución del hotel 
-            desde sus primeras cabañas hasta el día de hoy. En el Hotel HC, los huéspedes pueden 
-            elegir entre una variedad de ambientes únicos y acogedores que invitan al descanso y 
+        <p class="text-muted mb-5">
+            "El Hotel HC, inspirado en la calidez y serenidad de sus inicios,
+            ofrece ahora una experiencia de alojamiento única con habitaciones diseñadas
+            para brindar tanto lujo como comodidad. Cada espacio está decorado con detalles y
+            acabados seleccionados cuidadosamente, reflejando la esencia y evolución del hotel
+            desde sus primeras cabañas hasta el día de hoy. En el Hotel HC, los huéspedes pueden
+            elegir entre una variedad de ambientes únicos y acogedores que invitan al descanso y
             a disfrutar de una estancia memorable."
         </p>
 
@@ -17,14 +17,14 @@
                 <div class="room-card">
                     <div class="room-image" >
                         <!-- Using a placeholder image with the correct dimensions -->
-                        <div class="bg-light w-100" style="aspect-ratio: 370/276;" [style.backgroundImage]="'url(' + room.mainImage + ')'">
-                            
+                        <div class="bg-light w-100 room-thumb" style="aspect-ratio: 4/3;" [style.backgroundImage]="'url(' + room.mainImage + ')'">
+
                         </div>
                         <div class="room-overlay">
                             <div class="room-content">
-                                <div class="room-border" (click)="verDetalleCuarto(room)">
-                                    <h3 class="room-title">{{room.title}}</h3>
-                                    <p class="room-description">{{room.description}}</p>
+                                <div (click)="verDetalleCuarto(room)">
+                                    <h3 class="room-title Nll_clamp">{{room.title}}</h3>
+                                    <p class="room-description Nll_clamp-[2]">{{room.description}}</p>
                                 </div>
                                 <button type="button" class="btn btn-primary" (click)="reservarCuarto(room)">Reservar</button>
                             </div>

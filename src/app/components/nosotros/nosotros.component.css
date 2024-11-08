@@ -1,4 +1,51 @@
-.btn-secondary:hover {
-    background-color:var(--primary-mid-color) !important;
-    border-color: var(--primary-mid-color) !important;
+.hero-banner {
+  background-image: url('/assets/img/hotel-frente.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  & div {
+    z-index: 1;
   }
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: hsla(0, 0%, 0%, 0.5);
+
+    display: block;
+  }
+}
+
+.hero-about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+
+  & .text-cont {
+    color: var(--secondary-color);
+  }
+
+  & .img-cont {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    & .about-img {
+      background-image: url('/assets/img/2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      image-rendering: optimizeSpeed;
+      transition: all 480ms ease;
+    } & .about-img:hover {
+      transform: scale(1.2);
+    }
+  }
+}
